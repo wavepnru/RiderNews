@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt&display=swap');
+
+body {
+  font-family: "Prompt", sans-serif;
+  background-color: #fff8f3;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  background-color: transparent;
+  padding: 12px 0;
+  display: flex;
+  justify-content: center;
+  position: static;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li a {
+  color: #d24d00;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 17px;
+  padding: 10px 16px;
+  border-radius: 8px;
+}
+
+/*เมาส์ชี้*/
+.navbar li a:hover {
+  background-color: #eebfbf;
+  color: #f1582b;
+}
+
+/* ปุ่ม hamburger เริ่มซ่อนไว้ */
+.menu-toggle {
+  display: none;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #f1582b;
+}
+
+/* สำหรับจอเล็ก (มือถือ) */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* ให้ปุ่มแสดงบนมือถือ */
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    background-color: #fff8f3;
+    border-radius: 13px;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 50%;
+    display: none; /* ซ่อนเมนูเริ่มต้น */
+  }
+
+  /* class 'active' จะทำให้เมนูแสดง */
+  .navbar ul.active {
+    display: flex;
+  }
+}
+
+
+/*เนื้อหา*/
+.container {
+  max-width: 860px;
+  margin: 40px auto;
+  background: #ffffff;
+  padding: 35px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(241, 88, 43, 0.15);
+  border-top: 10px solid #f1582b;
+}
+
+h1 {
+  text-align: center;
+  color: #f1582b;
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+h2 {
+  color: #444;
+  margin-top: 30px;
+  font-size: 22px;
+  border-left: 6px solid #f1582b;
+  padding-left: 10px;
+}
+h3{
+  color: #444;
+  margin-top: 30px;
+  font-size: 22px;
+  border-left: 6px solid #f1582b;
+  padding-left: 10px;
+
+}
+
+ul {
+  padding-left: 25px;
+  margin-top: 15px;
+}
+
+ul li {
+  margin-bottom: 10px;
+  line-height: 1.7;
+  color: #333;
+}
+
+.highlight {
+  background-color: #ffe8e8;
+  border-left: 5px solid #dc3545;
+  padding: 8px 12px;
+  margin: 10px 0;
+  font-weight: bold;
+  color: #b30000;
+}
+
+
+/*รูป */
+.map-container img {
+  display: block;
+  margin: 20px auto; /* ตรงกลางและมีช่องว่าง */
+  width: 100%;
+  max-width: 1200px; /* ปรับขนาดไม่ให้ใหญ่เกิน */
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+
+/* ตาราง */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-size: 16px;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+th, td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+thead {
+  background-color: #ff5722;
+  color: white;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+@media (max-width: 600px) {
+  table {
+    font-size: 14px;
+  }
+
+  th, td {
+    padding: 10px 12px;
+  }
+}
+
+
+
+/* แถบfooter*/
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+
+footer.footer-full {
+  background-color: #f05523;
+  color: white;
+  padding: 25px 15px;
+  text-align: center;
+  margin-top: auto; /* ดัน footer ไปอยู่ล่าง */
+}
+
+.footer-content p {
+  margin: 5px 0;
+  font-size: 0.95rem;
+}
+
+

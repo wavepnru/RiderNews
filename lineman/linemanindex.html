@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lineman  หน้าหลัก</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+ <header>
+  <div class="logo">
+    <img src="image/lineman.jpg" alt="Logo">
+    <span>LINEMAN RIDER</span>
+  </div>
+  
+  <!-- ปุ่ม hamburger menu -->
+  <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+  <nav id="navMenu">
+    <ul>
+      <li><a href="คู่มือสำหรับมือใหม่.html">คู่มือสำหรับมือใหม่</a></li>
+      <li><a href="พบเจอปัญหาแก้อย่างไร.html">พบเจอปัญหาแก้อย่างไร</a></li>
+      <li><a href="ข้อควรระวัง มิจฉาชีพ.html">ข้อควรระวัง มิจฉาชีพ</a></li>
+      <li><a href="ช่วงเวลาโบนัส.html">ช่วงเวลาโบนัส</a></li>
+      <li><a href="โซนวิ่งงาน.html">โซนวิ่งงาน</a></li>
+      <li><a href="../index.html">กลับหน้าหลัก</a></li>
+    </ul>
+  </nav>
+</header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>LINEMAN RIDER</h1>
+      <p>บริการส่งอาหาร(Food Delivery) <br>ส่งของ/เอกสารด่วน (Messenger)<br>ซื้อของจากซูเปอร์มาร์เก็ต (Mart)<br>เรียกแท็กซี่ (Taxi)<br>ให้ทุกเรื่องในทุกวันเป็นเรื่องง่าย</p>
+      <br>
+      <br>
+      <div class="buttons">
+        <a href="https://play.google.com/store/apps/details?id=com.linecorp.lineman.driver&hl=th&pli=1" class="btn googleplay">Google Play</a>
+      </div>
+    </div>
+    <div class="hero-img">
+      <img src="image/Moon-rider.png"  alt="Lineman Character">
+    </div>
+  </section>
+
+
+   <footer class="footer-full">
+  <div class="footer-content">
+    <p>ติดต่อเรา: Shopee Food Support</p>
+    <p>โทร: 02-123-4567 | อีเมล: support@shopeefood.co.th</p>
+    <p>© 2025 Shopee Driver Thailand</p>
+  </div>
+</footer>
+
+
+  <script>
+  function toggleMenu() {
+    document.querySelector('#navMenu ul').classList.toggle('active');
+  }
+</script>
+
+</body>
+</html>

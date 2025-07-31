@@ -1,0 +1,141 @@
+/* ฟอนต์และพื้นฐาน */
+body {
+  margin: 0;
+  font-family: 'Prompt', sans-serif;
+  background-color: #fff;
+  color: #333;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffa600;
+  padding: 10px 20px;
+  flex-wrap: wrap;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.logo span {
+  font-weight: 700;
+  font-size: 1.2em;
+  color: #000000;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: #000000;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+nav a:hover {
+  background-color: #d48a00;
+}
+
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.hero-text {
+  max-width: 500px;
+  margin: 20px;
+}
+
+.hero-text h1 {
+  color: #ffa600;
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.hero-text p {
+  font-size: 1.2em;
+  color: #666;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  background-color: #ffa600;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #d48a00;
+}
+
+.hero-img img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ปุ่ม hamburger */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+}
+
+/* สำหรับมือถือ */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    width: 100%;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background-color: #ffa600;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  nav li {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 10px;
+  }
+}
