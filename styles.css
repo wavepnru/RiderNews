@@ -1,0 +1,146 @@
+/* ฟอนต์ และ รีเซ็ตค่าพื้นฐาน */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f4f4f4;
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header */
+header {
+  width: 100%;
+  background-color: #76BC43;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+
+header .subtext {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.menu-btn { 
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Main */
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 30px 10px;
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  box-sizing: border-box;
+}
+
+/* Card */
+.card {
+  background-color: #fff8f4;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 280px;
+  max-width: 90vw;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* เมนูมือถือ */
+.menu {
+  position: absolute;
+  top: 70px;
+  left: 20px;
+  background-color: #76BC43;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  display: none;
+  z-index: 99;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu ul li a {
+  display: block;
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.menu ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive: สำหรับมือถือ */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  header .subtext {
+    font-size: 0.8rem;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  .card img {
+    height: auto;
+  }
+
+  main {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Responsive: ซ่อนเมนูมือถือในจอใหญ่ */
+@media (min-width: 601px) {
+  .menu {
+    display: none !important;
+  }
+
+  .menu-btn {
+    display: none;
+  }
+}
